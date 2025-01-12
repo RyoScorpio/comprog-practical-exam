@@ -23,7 +23,7 @@ while True: # This loop ensures that the program is always running until it's pr
     if menuInput == "A": # User adds a product on the list
         prodName = input("Product: ") # Prompts the user to add a product
         prodName = prodName.upper() # Converts the input to uppercase
-        if prodName in shop:
+        if prodName in shop: # Stops the user from adding the same product
             print("*This product already exists.*")
             print()
         else:
