@@ -62,9 +62,16 @@ while True: # This loop ensures that the program is always running until it's pr
         prodName = prodName.upper()
         if prodName in shop: # Checks if the product exists in the product list
             priceIndex = shop.index(prodName) # Matches the product with its corresponding price
-            price[priceIndex] = float(input("Price: ")) # Prompts the user to change the selected product's price
-            print("*Price successfully changed.*")
-            print()
+            while True:
+                try:
+                    price[priceIndex] = float(input("Price: ")) # Prompts the user to change the selected product's price
+                    print("*Price successfully changed.*")
+                    print()
+                    break
+                except ValueError: # Prints an error if the inputted price is NOT a number
+                    print("*Invalid input. Please enter a number.*")
+                    print()
+                    continue
         else: # Executes if the input is invalid
             print("*The product does not exist.*")
             print()
