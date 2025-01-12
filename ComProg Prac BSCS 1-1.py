@@ -19,7 +19,8 @@ print()
 print("Menu: [A]dd  [R]emove  [U]pdate  [L]ist  [E]xit")
 
 while True: # This loop ensures that the program is always running until it's prompted to stop via [E]
-    menuInput = str(input("Option: "))
+    userInput = input("Option: ")
+    menuInput = userInput.upper() # Converts the input into uppercase
     if menuInput == "A": # User adds a product on the list
         prodName = input("Product: ") # Prompts the user to add a product
         prodName = prodName.upper() # Converts the input to uppercase
