@@ -21,6 +21,8 @@ print("Menu: [A]dd  [R]emove  [U]pdate  [L]ist  [E]xit")
 while True: # This loop ensures that the program is always running until it's prompted to stop via [E]
     userInput = input("Option: ")
     menuInput = userInput.upper() # Converts the input into uppercase
+    
+    # [A]dd command
     if menuInput == "A": # User adds a product on the list
         prodName = input("Product: ") # Prompts the user to add a product
         prodName = prodName.upper() # Converts the input to uppercase
@@ -39,6 +41,8 @@ while True: # This loop ensures that the program is always running until it's pr
                 print("*Invalid input. Please enter a number.*")
                 print()
                 continue
+
+    # [R]emove command
     elif menuInput == "R": # User removes a product from the list
         prodName = input("Product: ")
         prodName = prodName.upper()
@@ -51,6 +55,8 @@ while True: # This loop ensures that the program is always running until it's pr
         else: # Executes if the input is invalid
             print("*The product does not exist.*")
             print()
+
+    # [L]ist command
     elif menuInput == "L": # User views the list of available products
         print()
         print("{:25} {}".format("Product", "Price")) # Prints the labels for both lists
@@ -58,6 +64,8 @@ while True: # This loop ensures that the program is always running until it's pr
         # ^^^ This line allows both lists to be printed side by side with proper formatting
         print(itemList)
         print()
+
+    # [U]pdate command
     elif menuInput == "U": # User updates the price of an existing product
         prodName = input("Product: ")
         prodName = prodName.upper()
@@ -76,6 +84,8 @@ while True: # This loop ensures that the program is always running until it's pr
         else: # Executes if the input is invalid
             print("*The product does not exist.*")
             print()
+
+    # [E]xit command
     elif menuInput == "E": # Stops the program
         break
     else: # Prints an error if the user selects an invalid menu option
