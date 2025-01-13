@@ -21,6 +21,8 @@ print("Menu: [A]dd  [R]emove  [U]pdate  [L]ist  [E]xit")
 while True: # This loop ensures that the program is always running until it's prompted to stop via [E]
     userInput = input("Option: ")
     menuInput = userInput.upper() # Converts the input into uppercase
+
+    # [A]dd command
     if menuInput == "A": # User adds a product on the list
         while True:
             if prodPrice == 0: # Stops [A]dd command when cancelled from the price input
@@ -55,6 +57,8 @@ while True: # This loop ensures that the program is always running until it's pr
                 except ValueError: # Prints an error if the inputted price is NOT a number
                     print("*Invalid input. Please enter a number.*")
                     print()
+
+    # [R]emove command
     elif menuInput == "R": # User removes a product from the list
         while True:
             print("(Enter [E] to cancel.)")
@@ -73,6 +77,8 @@ while True: # This loop ensures that the program is always running until it's pr
             else: # Executes if the input is invalid
                 print("*The product does not exist.*")
                 print()
+
+    # [L]ist command
     elif menuInput == "L": # User views the list of available products
         print()
         print("{:25} {}".format("Product", "Price")) # Prints the labels for both lists
@@ -80,11 +86,10 @@ while True: # This loop ensures that the program is always running until it's pr
         # ^^^ This line allows both lists to be printed side by side with proper formatting
         print(itemList)
         print()
+
+    # [U]pdate command
     elif menuInput == "U": # User updates the price of an existing product
         while True:
-            # if prodPrice == 0: # Stops [U]pdate command if cancelled from price input
-                # prodPrice = 1
-                # break
             print()
             print("(Enter [E] to cancel.)")
             prodName = input("Product: ")
@@ -114,6 +119,8 @@ while True: # This loop ensures that the program is always running until it's pr
             except ValueError: # Prints an error if the inputted price is NOT a number
                 print("*Invalid input. Please enter a number.*")
                 print()
+
+    # [E]xit command
     elif menuInput == "E": # Stops the program
         print("*Program successfully stopped.*")
         break
