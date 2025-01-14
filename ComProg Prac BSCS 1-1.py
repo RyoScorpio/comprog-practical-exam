@@ -40,7 +40,6 @@ while True: # This loop ensures that the program is always running until it's pr
             except ValueError: # Prints an error if the inputted price is NOT a number
                 print("*Invalid input. Please enter a number.*")
                 print()
-                continue
 
     # [R]emove command
     elif menuInput == "R": # User removes a product from the list
@@ -80,7 +79,6 @@ while True: # This loop ensures that the program is always running until it's pr
                 except ValueError: # Prints an error if the inputted price is NOT a number
                     print("*Invalid input. Please enter a number.*")
                     print()
-                    continue
         else: # Executes if the input is invalid
             print("*The product does not exist.*")
             print()
