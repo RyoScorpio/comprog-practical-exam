@@ -6,6 +6,7 @@ yung list gamit yung [L]ist command? Max 25 characters sya pero di ko
 alam paano ilagay yung "..." pag sobra sa 25 characters.
     2. Wala pa yung bonus points which is sorting the list "by
 alphabetical" and "by price".
+    3. Kailangan ma-remove ang trailing at leading whitespaces kapag na-print yung list.
 
 Yun lang yung kulang as far as I know. Paki-triple check nalang yung code ko thank you!!!
 """
