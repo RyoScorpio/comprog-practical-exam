@@ -3,7 +3,7 @@ ComProg 1 Practical Exam #2
 BSCS 1-1
 
 Main Contributions:
-	Belandres: Overall code structure, menu options, first version of the [L]ist command, program comments
+	Belandres: Overall code structure, menu functionaity, first version of the code, program comments
 	Metillo: Rewrote code using custom functions, improving code for [L]ist command, sorting the list alphabetically and by price
 	Vertudazo: Truncating product names longer than 25 characters
 	Casabal: Additional advice regarding the code
